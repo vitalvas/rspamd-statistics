@@ -1,4 +1,4 @@
-package main
+package middleware
 
 import (
 	"net/http"
@@ -6,7 +6,7 @@ import (
 	"github.com/uptrace/bunrouter"
 )
 
-func contentTypeMiddleware(next bunrouter.HandlerFunc) bunrouter.HandlerFunc {
+func ContentType(next bunrouter.HandlerFunc) bunrouter.HandlerFunc {
 	return func(w http.ResponseWriter, req bunrouter.Request) error {
 		if req.Header.Get("content-type") != "application/msgpack" {
 			w.WriteHeader(http.StatusUnsupportedMediaType)

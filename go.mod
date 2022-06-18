@@ -3,7 +3,6 @@ module github.com/vitalvas/rspamd-statistics
 go 1.18
 
 require (
-	github.com/klauspost/compress v1.15.5
 	github.com/uptrace/bunrouter v1.0.17
 	github.com/uptrace/bunrouter/extra/reqlog v1.0.17
 	github.com/vmihailenco/msgpack/v5 v5.3.5
